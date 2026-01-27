@@ -49,11 +49,13 @@ function App() {
           />
         </div>
         <div className="text-white flex flex-col gap-1 items-center">
-          <h1 className="font-semibold text-8xl">Crafting Digital</h1>
-          <h1 className="font-semibold text-8xl m-1 text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text ">
+          <h1 className="text-5xl font-semibold md:text-8xl md:font-semibold">
+            Crafting Digital
+          </h1>
+          <h1 className="font-semibold text-5xl m-1 text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text xl:text-8xl">
             Experiences
           </h1>
-          <p className="w-2/3 mt-10 font-semibold text-zinc-400">
+          <p className="w-2/3 text-sm mt-10 font-semibold text-zinc-400 md:text-xl">
             A multi-disciplinary engineer crafting robust software, intelligent
             IoT systems, and reliable network infrastructure with a passion for
             innovation.
@@ -67,7 +69,7 @@ function App() {
             exprestis
           </h1>
         </div>
-        <div className="flex gap-2 ">
+        <div className="flex flex-col md:flex-row gap-2 ">
           <Card
             icon={<IoMdCode />}
             title="Software Engineer"
