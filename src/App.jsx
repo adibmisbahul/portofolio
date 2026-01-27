@@ -3,7 +3,7 @@ import Tag from "./components/Tag";
 import { IoMdCode } from "react-icons/io";
 import { FaMicrochip } from "react-icons/fa6";
 import { FaNetworkWired } from "react-icons/fa";
-import LayoutOne from "./layouts/layoutOne";
+import LayoutOne from "./layouts/LayoutOne";
 import { WiStars } from "react-icons/wi";
 import Navbar from "./components/Navbar";
 import TagText from "./components/TagText";
@@ -67,7 +67,7 @@ function App() {
             exprestis
           </h1>
         </div>
-        <div className="flex gap-2 sm:flex flex-col ">
+        <div className="flex gap-2 ">
           <Card
             icon={<IoMdCode />}
             title="Software Engineer"
