@@ -1,23 +1,29 @@
-import Tag from "../components/Tag";
 import { IoMdCode } from "react-icons/io";
 import { FaMicrochip } from "react-icons/fa6";
 import { FaNetworkWired } from "react-icons/fa";
-import Card from "../components/Card";
-import TagText from "../components/TagText";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-
-import imagePetroleum from "../assets/image1.png";
-import imageNetwork from "../assets/image2.png";
+import TagText from "../components/TagText";
+import Card from "../components/Card";
+import Tag from "../components/Tag";
+import CardProject from "../components/CardProject";
 
 export default function Dashboard() {
   const firstTag = [
-    { title: "Software Engineer", icon: <IoMdCode />, bgIcon: "bg-purple-600" },
-    { title: "Iot System", icon: <FaMicrochip />, bgIcon: "bg-blue-600" },
+    {
+      title: "Software Engineer",
+      icon: <IoMdCode color="white" />,
+      bgIcon: "bg-purple-600",
+    },
+    {
+      title: "Iot System",
+      icon: <FaMicrochip color="white" />,
+      bgIcon: "bg-blue-600",
+    },
     {
       title: "Network Engineer",
-      icon: <FaNetworkWired />,
+      icon: <FaNetworkWired color="white" />,
       bgIcon: "bg-rose-600",
     },
   ];
@@ -27,6 +33,7 @@ export default function Dashboard() {
     { icon: <FaLinkedin color="blue" size={25} />, linkTo: "" },
     { icon: <FaInstagram size={25} />, linkTo: "" },
   ];
+
   return (
     <div className="w-full h- overflow-x-hidden">
       <div className="bg-zinc-950 flex flex-col items-center justify-center h-[100vh] relative z-10 gap-3 w-full">
@@ -59,7 +66,7 @@ export default function Dashboard() {
           })}
         </div>
       </div>
-      <div className=" p-4 flex flex-col items-center justify-center gap-2 bg-zinc-950 relative overflow-hidden z-10">
+      <div className=" p-4 flex flex-col items-center justify-center gap-2 bg-zinc-950 relative overflow-hidden z-10 md:flex-row">
         <div class="absolute -z-10 size-130 brightness-20 bg-violet-700 top-0 rounded-r-full blur-[100px]"></div>
         <Card
           icon={<IoMdCode />}
@@ -75,29 +82,29 @@ export default function Dashboard() {
         <Card
           icon={<FaMicrochip />}
           title="Iot System"
-          description="Full-stack development with modern frameworks, clean architecture, and scalable solutions."
+          description="Embedded programming, sensor integration, and smart device ecosystems for automation."
           bgIcon="bg-blue-600"
         >
-          <TagText title="React" />
-          <TagText title="Express" />
-          <TagText title="Postgres Sql" />
-          <TagText title="Docker" />
+          <TagText title="Esp 32" />
+          <TagText title="MQTT" />
+          <TagText title="python" />
+          <TagText title="Arduino" />
         </Card>
         <Card
           icon={<FaNetworkWired />}
           title="Network engineer"
-          description="Full-stack development with modern frameworks, clean architecture, and scalable solutions."
+          description="Network design, security implementation, and infrastructure optimization"
           bgIcon="bg-rose-600"
         >
-          <TagText title="React" />
-          <TagText title="Express" />
-          <TagText title="Postgres Sql" />
-          <TagText title="Docker" />
+          <TagText title="Mikrotik" />
+          <TagText title="Cisco" />
+          <TagText title="Firewall" />
+          <TagText title="Vpn" />
         </Card>
         <div class="absolute -z-10 size-130 brightness-20 bg-sky-700 bottom-0 right-0 rounded-l-full blur-[100px]"></div>
       </div>
-      <div className="p-4 bg-zinc-950 flex flex-col gap-2 relative z-10 overflow-hidden">
-        <div class="absolute -z-10 size-130 brightness-20 bg-violet-700 top-0 rounded-r-full blur-[100px]"></div>
+      <div className="p-4 bg-zinc-950 flex flex-col gap-2 relative z-10 overflow-hidden md:flex-row">
+        <div class="absolute -z-10 size-130 brightness-20 bg-violet-700 top-0 rounded-r-full blur-[100px] "></div>
         <div className="mockup-code w-full flex flex-col items-start bg-white/10 backdrop-blur-sm">
           <pre data-prefix="$">
             <code>cd project</code>
@@ -109,36 +116,7 @@ export default function Dashboard() {
             <code>ready in 1305 ms</code>
           </pre>
         </div>
-        <div className="mockup-browser border  w-full  backdrop-blur-sm bg-white/10  border-zinc-600">
-          <div className="mockup-browser-toolbar">
-            <div className="input bg-transparent">
-              Petroleum monitoring system
-            </div>
-          </div>
-          <div className="grid place-content-evenly h-80 p-2">
-            <img src={imagePetroleum} alt="" className="rounded-md" />
-            <div className="flex flex-wrap gap-2 mt-2">
-              <TagText title="React" />
-              <TagText title="Express.js" />
-              <TagText title="Postgres Sql" />
-            </div>
-          </div>
-        </div>
-        <div className="mockup-browser border  w-full  backdrop-blur-xs bg-white/10  border-zinc-600">
-          <div className="mockup-browser-toolbar">
-            <div className="input bg-transparent">
-              Network monitoring system
-            </div>
-          </div>
-          <div className="grid place-content-evenly h-80 p-2">
-            <img src={imageNetwork} alt="" className="rounded-md" />
-            <div className="flex flex-wrap gap-2 mt-2">
-              <TagText title="React" />
-              <TagText title="Express.js" />
-              <TagText title="Postgres Sql" />
-            </div>
-          </div>
-        </div>
+        <CardProject />
         <div class="absolute -z-10 size-100 brightness-40 bg-sky-700 bottom-0 right-0 rounded-l-full blur-[100px]"></div>
       </div>
     </div>
