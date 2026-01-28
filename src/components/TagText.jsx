@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function TagText(props) {
   const { title, paddingX, paddingY, textColor } = props;
   return (
