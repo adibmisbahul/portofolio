@@ -59,7 +59,8 @@ export default function Dashboard() {
           })}
         </div>
       </div>
-      <div className=" p-4 flex flex-col items-center justify-center gap-2 bg-zinc-950 relative overflow-hidden">
+      <div className=" p-4 flex flex-col items-center justify-center gap-2 bg-zinc-950 relative overflow-hidden z-10">
+        <div class="absolute -z-10 size-130 brightness-20 bg-violet-700 top-0 rounded-r-full blur-[100px]"></div>
         <Card
           icon={<IoMdCode />}
           title="Software Engineer"
@@ -93,12 +94,22 @@ export default function Dashboard() {
           <TagText title="Postgres Sql" />
           <TagText title="Docker" />
         </Card>
+        <div class="absolute -z-10 size-130 brightness-20 bg-sky-700 bottom-0 right-0 rounded-l-full blur-[100px]"></div>
       </div>
       <div className="p-4 bg-zinc-950 flex flex-col gap-2 relative z-10 overflow-hidden">
-        <h1 className="font-semibold text-6xl m-1 text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text ">
-          Project
-        </h1>
-        <div className="mockup-browser border  w-full  backdrop-blur-xs bg-white/10  border-zinc-600">
+        <div class="absolute -z-10 size-130 brightness-20 bg-violet-700 top-0 rounded-r-full blur-[100px]"></div>
+        <div className="mockup-code w-full flex flex-col items-start bg-white/10 backdrop-blur-sm">
+          <pre data-prefix="$">
+            <code>cd project</code>
+          </pre>
+          <pre data-prefix=">" className="text-warning">
+            <code>npm run dev...</code>
+          </pre>
+          <pre data-prefix=">" className="text-success">
+            <code>ready in 1305 ms</code>
+          </pre>
+        </div>
+        <div className="mockup-browser border  w-full  backdrop-blur-sm bg-white/10  border-zinc-600">
           <div className="mockup-browser-toolbar">
             <div className="input bg-transparent">
               Petroleum monitoring system
@@ -116,7 +127,7 @@ export default function Dashboard() {
         <div className="mockup-browser border  w-full  backdrop-blur-xs bg-white/10  border-zinc-600">
           <div className="mockup-browser-toolbar">
             <div className="input bg-transparent">
-              Petroleum monitoring system
+              Network monitoring system
             </div>
           </div>
           <div className="grid place-content-evenly h-80 p-2">
