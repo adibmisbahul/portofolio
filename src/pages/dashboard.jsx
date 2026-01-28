@@ -100,7 +100,7 @@ export default function Dashboard() {
               Petroleum monitoring system
             </div>
           </div>
-          <div className="grid place-content-start h-80 p-2">
+          <div className="grid place-content-evenly h-80 p-2">
             <img src={imagePetroleum} alt="" className="rounded-md" />
             <div className="flex flex-wrap gap-2 mt-2">
               <TagText title="React" />
