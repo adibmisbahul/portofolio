@@ -9,6 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 
 import imagePetroleum from "../assets/image1.png";
+import imageNetwork from "../assets/image2.png";
 
 export default function Dashboard() {
   const firstTag = [
@@ -31,6 +32,20 @@ export default function Dashboard() {
       <div className="bg-zinc-950 flex flex-col items-center justify-center h-[100vh] relative z-10 gap-3 w-full">
         <div class="absolute -z-10 size-130 brightness-20 bg-violet-700 top-0 rounded-r-full blur-[100px]"></div>
         <div class="absolute -z-10 size-130 brightness-20 bg-sky-700 bottom-0 right-0 rounded-l-full blur-[100px]"></div>
+        <div className="flex flex-col items-center">
+          <h1 className="text-5xl font-semibold md:text-8xl md:font-semibold">
+            Crafting Digital
+          </h1>
+          <h1 className="font-semibold text-5xl m-1 text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text xl:text-8xl">
+            Experiences
+          </h1>
+          <p className="w-2/3 text-sm mt-2 font-semibold text-zinc-400 md:text-xl">
+            A multi-disciplinary engineer crafting robust software, intelligent
+            IoT systems, and reliable network infrastructure with a passion for
+            innovation.
+          </p>
+        </div>
+
         <div className="flex gap-1 p-3 justify-center">
           {firstTag.map((item) => {
             return (
@@ -38,20 +53,9 @@ export default function Dashboard() {
             );
           })}
         </div>
-        <h1 className="text-5xl font-semibold md:text-8xl md:font-semibold">
-          Crafting Digital
-        </h1>
-        <h1 className="font-semibold text-5xl m-1 text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text xl:text-8xl">
-          Experiences
-        </h1>
-        <p className="w-2/3 text-sm  font-semibold text-zinc-400 md:text-xl">
-          A multi-disciplinary engineer crafting robust software, intelligent
-          IoT systems, and reliable network infrastructure with a passion for
-          innovation.
-        </p>
-        <div className="flex gap-2 mt-5">
+        <div className="flex gap-10">
           {media.map((item) => {
-            return <span>{item.icon}</span>;
+            return <span className="">{item.icon}</span>;
           })}
         </div>
       </div>
@@ -102,6 +106,21 @@ export default function Dashboard() {
           </div>
           <div className="grid place-content-evenly h-80 p-2">
             <img src={imagePetroleum} alt="" className="rounded-md" />
+            <div className="flex flex-wrap gap-2 mt-2">
+              <TagText title="React" />
+              <TagText title="Express.js" />
+              <TagText title="Postgres Sql" />
+            </div>
+          </div>
+        </div>
+        <div className="mockup-browser border  w-full  backdrop-blur-xs bg-white/10  border-zinc-600">
+          <div className="mockup-browser-toolbar">
+            <div className="input bg-transparent">
+              Petroleum monitoring system
+            </div>
+          </div>
+          <div className="grid place-content-evenly h-80 p-2">
+            <img src={imageNetwork} alt="" className="rounded-md" />
             <div className="flex flex-wrap gap-2 mt-2">
               <TagText title="React" />
               <TagText title="Express.js" />
