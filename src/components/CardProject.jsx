@@ -1,5 +1,6 @@
 import Image1 from "../assets/image1.png";
 import Image2 from "../assets/image2.png";
+import Image3 from "../assets/image3.png";
 import TagText from "./TagText";
 
 const ActionCircle = () => {
@@ -17,6 +18,16 @@ export default function CardProject() {
     {
       cardTitle: "Petroleum Monitoring Sistem",
       image: Image1,
+      tag: ["React", "Docker", "Express.js", "PostgreSql"],
+    },
+    {
+      cardTitle: "E-comerce App",
+      image: Image3,
+      tag: ["React", "Docker", "Express.js", "PostgreSql"],
+    },
+    {
+      cardTitle: "Network Monitoring System",
+      image: Image2,
       tag: ["React", "Docker", "Express.js", "PostgreSql"],
     },
   ];
